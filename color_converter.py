@@ -1,7 +1,8 @@
-import cv2 as cv
-from tkinter import *
-from tkinter.filedialog import *
 import os
+import cv2 as cv
+from tkinter import Label, Grid, Button, OptionMenu, StringVar, Text, Tk, END
+from tkinter.filedialog import askdirectory, askopenfilenames
+
 
 
 root = Tk()
@@ -79,6 +80,7 @@ input_filename.grid(row=2,column=1,columnspan=3)
 #class
 software_message.insert(END, "Select Directory to save files in")
 save_as=""
+
 def get_Directory():
     global save_as
     ask_Directory=askdirectory(title='Select Directory')
